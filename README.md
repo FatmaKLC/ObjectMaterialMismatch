@@ -1,193 +1,199 @@
-# Material Appearance Affects Object Categorization
-Experiment Code & Analysis Repository
+# Material Appearance Affects Object Categorization  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17670327.svg)](https://doi.org/10.5281/zenodo.17670327)
 
-This repository contains all MATLAB code, stimulus folders, and statistical analysis scripts for the three experiments reported in "Material Appearance Affects Object Categorization" (working title).
+## Stimuli Availability
 
-The experiments investigate how material appearance (original vs mismatched surface materials) affects visual object categorization behaviour using Go/No-Go and rating tasks.
+All stimuli used in the experiments (Original, Grayscale, Exploratory, and Line-Drawing sets)  
+are publicly available via Zenodo and can be downloaded here:
 
-📂 Repository Structure
+🔗 **https://doi.org/10.5281/zenodo.17670327**
+
+Because the stimulus folders exceed GitHub’s file size limits, they are hosted on Zenodo instead  
+and linked to this repository.
+
+---
+
+## 📁 Experiment Code & Analysis Repository
+
+This repository contains all MATLAB experiment scripts and statistical analysis code  
+for the project **“Material Appearance Affects Object Categorization”** (working title).
+
+The experiments investigate how changing material appearance (original vs. mismatched)  
+affects visual object categorization behaviour.
+
+---
+
+## 📁 Repository Structure
+
+```text
 ObjectMaterialMismatch/
-│
 ├── Experiments/
 │   ├── Experiment 1 - Original/
-│   │    └── Run_ObjectMaterialMismatch_GoNoGoTask.m
+│   │   └── Run_ObjectMaterialMismatch_GoNoGoTask.m
 │   │
 │   ├── Experiment 2 - Grayscale/
-│   │    └── Run_ObjectMaterialMismatch_Grayscale_GoNoGoTask.m
+│   │   └── Run_ObjectMaterialMismatch_Grayscale_GoNoGoTask.m
 │   │
 │   └── Experiment 3 - Exploratory/
-│        └── Run_DiagFam_Control_Exp.m
-│
-├── Stimuli/
-│   ├── ImFolder - Original
-│   ├── ImFolder - Grayscale
-│   ├── ImFolder - Exploratory
-│   └── ImFolderLineDrawing - Exploratory
+│       └── Run_DiagFam_Control_Exp.m
 │
 └── Analyses/
     ├── Experiment 1 - Original/
-    │     ├── analyse_RT_RMANOVA_Category_ImageType.m
-    │     └── analyse_Accuracy_RMANOVA_Category_ImageType.m
+    │   ├── analyse_RT_RMANOVA_Category_ImageType.m
+    │   └── analyse_Accuracy_RMANOVA_Category_ImageType.m
     │
     ├── Experiment 2 - Grayscale/
-    │     ├── analyse_RT_Grayscale_RMANOVA_Category_ImageType.m
-    │     └── analyse_Accuracy_Grayscale_RMANOVA_Category_ImageType.m
+    │   ├── analyse_RT_Grayscale_RMANOVA_Category_ImageType.m
+    │   └── analyse_Accuracy_Grayscale_RMANOVA_Category_ImageType.m
     │
     └── Experiment 3 - Exploratory/
-          └── (analysis scripts to be added)
+        └── (analysis scripts to be added)
+```
+---
 
-🧪 Overview of Experiments
-Experiment 1 – Original (Colour) Go/No-Go Task
+## 🧪 Experiment Overview
 
-Participants respond as fast as possible whenever an object from the target category appears.
-Image types:
+### **Experiment 1 – Original (Colour) Go/No-Go**
+Participants press **ENTER** when an object from the target category appears.  
+Stimulus types:
+- **Original** material  
+- **Material-mismatched** (“Rest”)
 
-Original material
+Script:  
+`Experiments/Experiment 1 - Original/Run_ObjectMaterialMismatch_GoNoGoTask.m`
 
-Material-mismatched (“Rest”)
+---
 
-Script:
-Experiments/Experiment 1 - Original/Run_ObjectMaterialMismatch_GoNoGoTask.m
+### **Experiment 2 – Grayscale Go/No-Go (Control)**
+Identical to Experiment 1, but **all images are grayscale** to remove colour cues.
 
-Experiment 2 – Grayscale Control Go/No-Go
+Script:  
+`Experiments/Experiment 2 - Grayscale/Run_ObjectMaterialMismatch_Grayscale_GoNoGoTask.m`
 
-Identical to Experiment 1, but all images are rendered in grayscale to remove colour cues.
+---
 
-Script:
-Experiments/Experiment 2 - Grayscale/Run_ObjectMaterialMismatch_Grayscale_GoNoGoTask.m
-
-Experiment 3 – Exploratory Diagnosticity & Familiarity Ratings
+### **Experiment 3 – Exploratory (Diagnosticity & Familiarity)**
 
 Two blocks:
 
-Diagnosticity block (line drawings)
+#### 1. Diagnosticity ratings (line drawings)
 Participants rate:
+- **How variable** the object's real-world material is  
+- **How many materials** the object typically contains  
 
-How many materials the object is typically made of
+(0–1 sliders, two questions per image)
 
-How variable its material composition could be
-(two sliders per image)
+#### 2. Familiarity ranking
+Participants rank 10 images (1 per category) from **most familiar → least familiar**.
 
-Familiarity ranking block
-Participants rank 10 images (1 per category) from most to least familiar.
+Script:  
+`Experiments/Experiment 3 - Exploratory/Run_DiagFam_Control_Exp.m`
 
-Script:
-Experiments/Experiment 3 - Exploratory/Run_DiagFam_Control_Exp.m
+---
 
-📊 Analysis Scripts
+## 📊 Analysis Scripts
 
-All analysis scripts use MATLAB R2017b–R2023b compatible functions.
+MATLAB R2017b–R2023b compatible.
 
-Experiment 1 Analysis (Colour)
-
-Located in:
-
-Analyses/Experiment 1 - Original/
-
+### **Experiment 1 Analysis (Colour)**
+`Analyses/Experiment 1 - Original/`
 
 Scripts:
+- `analyse_RT_RMANOVA_Category_ImageType.m`
+- `analyse_Accuracy_RMANOVA_Category_ImageType.m`
+- `material_effect_color_vs_grayscale.m`  
+  → compares mismatch effects between **Colour vs. Grayscale** using RM-ANOVA, mixed LME, Welch tests, bootstrapped CIs.
 
-analyse_RT_RMANOVA_Category_ImageType.m
+---
 
-analyse_Accuracy_RMANOVA_Category_ImageType.m
-
-material_effect_color_vs_grayscale.m
-→ compares mismatch effect between Colour vs Grayscale experiments (RM-ANOVA, LME, Welch tests).
-
-Experiment 2 Analysis (Grayscale)
-
-Located in:
-
-Analyses/Experiment 2 - Grayscale/
-
+### **Experiment 2 Analysis (Grayscale)**
+`Analyses/Experiment 2 - Grayscale/`
 
 Scripts:
+- `analyse_RT_Grayscale_RMANOVA_Category_ImageType.m`
+- `analyse_Accuracy_Grayscale_RMANOVA_Category_ImageType.m`
 
-analyse_RT_Grayscale_RMANOVA_Category_ImageType.m
+---
 
-analyse_Accuracy_Grayscale_RMANOVA_Category_ImageType.m
+### **Experiment 3 Analysis**
+Will be added later (folder placeholder included).
 
-Experiment 3 Analysis
+---
 
-Will be added later; placeholder folder is ready.
+## 📦 Stimuli (Download via Zenodo)
 
-📁 Stimuli Structure
-Stimuli/
-│
-├── ImFolder - Original/
-│     ├── Animal/
-│     │     └── 10 subfolders (each 6 images)
-│     ├── Appliance/
-│     ├── ...
-│
-├── ImFolder - Grayscale/   (identical structure, grayscale)
-│
-├── ImFolder - Exploratory/  (material-swapped versions)
-│
-└── ImFolderLineDrawing - Exploratory/
-      └── 8 categories × 10 line drawings
+Since GitHub rejects large folders, all stimuli are hosted on Zenodo.
 
+### **Download Stimuli (Zenodo DOI)**  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17670327.svg)](https://doi.org/10.5281/zenodo.17670327)
 
-Participants see:
+Direct link:  
+🔗 https://doi.org/10.5281/zenodo.17670327
 
-Original vs mismatched material versions (Exp 1 & 2)
+### Zenodo Contents:
+- `ImFolder - Original.zip`
+- `ImFolder - Grayscale.zip`
+- `ImFolder - Exploratory.zip`
+- `ImFolderLineDrawing - Exploratory.zip`
 
-Line drawings and original images (Exp 3)
+Each ZIP follows the folder naming expected by the MATLAB scripts.
 
-▶️ Running the Experiments
-Requirements
+---
 
-MATLAB (R2017b or later)
+## ▶️ Running the Experiments
 
-Psychtoolbox 3
+### Requirements:
+- MATLAB (R2017b or later)
+- Psychtoolbox 3
+- Display resolution & viewing distance should match experiment constants
 
-Display resolution & viewing distance should match the values set in the scripts
+### To run an experiment:
 
-To run:
+```bash
 cd Experiments/Experiment 1 - Original
 Run_ObjectMaterialMismatch_GoNoGoTask
-
-
-Stimuli folders must remain exactly named as:
+```
+Required stimulus folder names:
 
 ImFolder
+
 ImFolderGrayScale
+
 ImFolderLineDrawing
 
+(make sure they match exactly)
 
-(or as the script currently references them).
-
-📈 Outputs
+📈 Output Files
 
 Each experiment saves:
 
-A "responses" table with trial-level data
+A responses table with trial-level data
 
 Participant metadata (ID, gender, age)
 
-Reaction times
+Reaction times (RT)
 
-Accuracy (calculated or recalculated)
+Accuracy
 
-Block/category information
+Block/category info
 
-Analysis scripts generate:
+Analyses produce:
 
 RM-ANOVA tables
 
-Post-hoc tests (Bonferroni)
+Bonferroni post-hoc tests
 
-Partial eta-squared
+Partial eta-squared values
 
-LME models (overall & per category)
+Mixed-effects models
 
 ΔRT mismatch indices
 
 Figures (bar plots, forest plots)
 
 🖊️ Citation / Author Information
-
 Material Appearance Affects Object Categorization
+
 (working title)
 
 Authors:
@@ -209,7 +215,6 @@ Affiliations:
 ² Center for Mind, Brain and Behavior (CMBB), 35032 Marburg, Germany
 
 Author Emails:
-
 fatma.kilic@psychol.uni-giessen.de
 
 celine.aubuchon@psychol.uni-giessen.de
@@ -222,16 +227,16 @@ roland.w.fleming@psychol.uni-giessen.de
 
 filipp.schmidt@psychol.uni-giessen.de
 
-A formal citation entry will be added when the manuscript is published.
+A formal citation will be added upon publication.
 
 🔒 License
 
-To be added depending on journal requirements (GPL-3, MIT, or CC-BY recommended for reproducible science).
+To be added later (recommendation: MIT or CC-BY 4.0 for reproducible science).
 
 📝 Notes
 
-All analysis scripts are publication-ready and use reproducible statistics.
+All analysis scripts are publication-ready and reproducible.
 
-Stimuli cannot be redistributed unless permitted by copyright (remove them if needed before public release).
+Stimuli are hosted externally due to size limits.
 
-Code will remain private until manuscript submission; then it can be switched to public.
+The repository will remain private until manuscript submission.
