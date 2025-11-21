@@ -153,68 +153,61 @@ Each ZIP follows the folder naming expected by the MATLAB scripts.
 cd Experiments/Experiment 1 - Original
 Run_ObjectMaterialMismatch_GoNoGoTask
 ```
-Required stimulus folder names:
+### Required stimulus folder names:
 
-ImFolder
+- ImFolder
+- ImFolderGrayScale
+- ImFolderLineDrawing
 
-ImFolderGrayScale
 
-ImFolderLineDrawing
+---
 
-(make sure they match exactly)
 
-📈 Output Files
+## 📈 Output Files
 
 Each experiment saves:
 
-A responses table with trial-level data
+- Trial-level responses table ("responses")
+- Participant metadata (ID, gender, age)
+- Reaction times (RT)
+- Accuracy (raw [0 or 1])
+- Category labels
+- Block information (if applicable)
 
-Participant metadata (ID, gender, age)
+## 📈 Analysis Outputs
 
-Reaction times (RT)
+Analysis scripts in the Analyses/ directory generate:
 
-Accuracy
+- RM-ANOVA tables (with GG/HF corrected p-values)
+- Bonferroni post-hoc comparisons
+- Partial eta-squared effect sizes
+- Mixed-effects models (overall + per-category)
+- ΔRT mismatch indices (Other − Original)
+- Welch tests & bootstrap confidence intervals
+- Figures:
+    – Reaction-time bar plots
+    – Accuracy bar plots
+    – Per-category comparison plots
+    – Forest plots for ΔΔRT (Gray − Color)
 
-Block/category info
 
-Analyses produce:
+---
 
-RM-ANOVA tables
 
-Bonferroni post-hoc tests
-
-Partial eta-squared values
-
-Mixed-effects models
-
-ΔRT mismatch indices
-
-Figures (bar plots, forest plots)
-
-🖊️ Citation / Author Information
-Material Appearance Affects Object Categorization
+## 🖊️ Citation / Author Information
+### Material Appearance Affects Object Categorization
 
 (working title)
 
-Authors:
+#### Authors:
 
-Fatma Kilic¹²
+Fatma Kilic¹², Celine Aubuchon¹, Emily J. A-Izzeddin¹², Zoe R. Goll¹², Roland W. Fleming¹², Filipp Schmidt¹²
 
-Celine Aubuchon¹
-
-Emily J. A-Izzeddin¹²
-
-Zoe R. Goll¹²
-
-Roland W. Fleming¹²
-
-Filipp Schmidt¹²
-
-Affiliations:
+#### Affiliations:
 ¹ Department of Experimental Psychology, Justus Liebig University Giessen, 35394 Giessen, Germany
 ² Center for Mind, Brain and Behavior (CMBB), 35032 Marburg, Germany
 
-Author Emails:
+#### Author Emails:
 fatma.kilic@psychol.uni-giessen.de
 
 celine.aubuchon@psychol.uni-giessen.de
@@ -229,14 +222,22 @@ filipp.schmidt@psychol.uni-giessen.de
 
 A formal citation will be added upon publication.
 
-🔒 License
+
+---
+
+
+## 🔒 License
 
 To be added later (recommendation: MIT or CC-BY 4.0 for reproducible science).
 
-📝 Notes
+
+---
+
+
+## 📝 Notes
 
 All analysis scripts are publication-ready and reproducible.
 
 Stimuli are hosted externally due to size limits.
 
-The repository will remain private until manuscript submission.
+The repository will remain private until the manuscript is submitted.
