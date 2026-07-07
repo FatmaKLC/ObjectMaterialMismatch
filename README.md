@@ -39,15 +39,20 @@ ObjectMaterialMismatch/
 │
 └── Analyses/
     ├── Experiment 1 - Original/
-    │   ├── analyse_RT_RMANOVA_Category_ImageType.m
-    │   └── analyse_Accuracy_RMANOVA_Category_ImageType.m
+    │   ├── Accuracy_LeaveOneOut_Model_SimpleEffectsIncluded.m
+    │   ├── RT_LeaveOneOut_Model_SimpleEffectsIncluded.m
+    │   ├── Plotting_RT_Accuracy_Manuscript.m
+    │   └── Comparison_Colored_vs_Grayscale_Exps.m
     │
     ├── Experiment 2 - Grayscale/
-    │   ├── analyse_RT_Grayscale_RMANOVA_Category_ImageType.m
-    │   └── analyse_Accuracy_Grayscale_RMANOVA_Category_ImageType.m
+    │   ├── Accuracy_Grayscale_LeaveOneOut_Model_SimpleEffectsIncluded.m
+    │   └── RT_Grayscale_LeaveOneOut_Model_SimpleEffectsIncluded.m
     │
     └── Experiment 3 - Exploratory/
-        └── (analysis scripts to be added)
+        ├── analyse_RT_Exploratory_mixedModel.m
+        ├── analyse_Accuracy_Exploratory_mixedModel.m
+        ├── summary_tables_Exploratory.m
+        └── analyse_Exploratory_Reliability.m
 ```
 ---
 
