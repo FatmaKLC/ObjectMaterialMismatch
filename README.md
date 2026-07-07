@@ -99,9 +99,10 @@ MATLAB R2017b–R2023b compatible.
 `Analyses/Experiment 1 - Original/`
 
 Scripts:
-- `analyse_RT_RMANOVA_Category_ImageType.m`
-- `analyse_Accuracy_RMANOVA_Category_ImageType.m`
-- `material_effect_color_vs_grayscale.m`  
+- `Accuracy_LeaveOneOut_Model_SimpleEffectsIncluded.m`
+- `RT_LeaveOneOut_Model_SimpleEffectsIncluded.m`
+- `Plotting_RT_Accuracy_Manuscript.m`
+- `Comparison_Colored_vs_Grayscale_Exps.m`  
   → compares mismatch effects between **Colour vs. Grayscale** using RM-ANOVA, mixed LME, Welch tests, bootstrapped CIs.
 
 ---
@@ -110,13 +111,19 @@ Scripts:
 `Analyses/Experiment 2 - Grayscale/`
 
 Scripts:
-- `analyse_RT_Grayscale_RMANOVA_Category_ImageType.m`
-- `analyse_Accuracy_Grayscale_RMANOVA_Category_ImageType.m`
+- `Accuracy_Grayscale_LeaveOneOut_Model_SimpleEffectsIncluded.m`
+- `RT_Grayscale_LeaveOneOut_Model_SimpleEffectsIncluded.m`
 
 ---
 
 ### **Experiment 3 Analysis**
-Will be added later (folder placeholder included).
+`Analyses/Experiment 3 - Exploratory/`
+
+Scripts:
+- `analyse_RT_Exploratory_mixedModel.m`
+- `analyse_Accuracy_Exploratory_mixedModel.m`
+- `summary_tables_Exploratory.m`
+- `analyse_Exploratory_Reliability.m`
 
 ---
 
@@ -239,5 +246,3 @@ To be added later (recommendation: MIT or CC-BY 4.0 for reproducible science).
 All analysis scripts are publication-ready and reproducible.
 
 Stimuli are hosted externally due to size limits.
-
-The repository will remain private until the manuscript is submitted.
