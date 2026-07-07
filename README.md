@@ -1,5 +1,5 @@
 # Material Appearance Affects Object Categorization  
-[Stimuli](https://zenodo.org/badge/DOI/10.5281/zenodo.17670327.svg)](https://doi.org/10.5281/zenodo.17670327)
+[!doi](https://zenodo.org/badge/DOI/10.5281/zenodo.17670327.svg)](https://doi.org/10.5281/zenodo.17670327)
 
 ## Stimuli Availability
 
